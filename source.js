@@ -1,11 +1,14 @@
-const scoreButton = document.getElementById('scoreButton');
-const scoreElement = document.getElementById('score');
-let score = 0;
-	
-setInterval(function(){
-	scoreElement.innerHTML = Math.floor(score) + " Points";
-})
+const scoreButton = document.getElementById('scoreButton'); // Access the button element
+const scoreElement = document.getElementById('score'); // Access the score element
+let score = 0; // Set the score to 0 when first loaded
 
-scoreButton.addEventListener('click', event => {
-	score++;
+// Run this function as many times as possible per second
+setInterval( 
+	function(){  
+		scoreElement.innerHTML = score + " Points"; // Make sure the score element is displaying the correct score
+	}
+)
+
+scoreButton.addEventListener('click', event => { // Detect when the button is clicked
+	score++; // Increase the score by 1
 });
